@@ -19,5 +19,7 @@ RUN mkdir -p /var/log/supervisor
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY config/gunicorn.conf /etc/supervisor/conf.d/gunicorn.conf
 
+EXPOSE 80
+
 # Start processes
 CMD ["/usr/bin/supervisord"]
