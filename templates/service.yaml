@@ -64,16 +64,5 @@ Resources:
           Environment:
             - Name: Tag
               Value: !Ref Tag
-        - Name: busybox
-          Image: busybox
-          EntryPoint:
-            - sh
-            - -c
-          Essential: false
-          Memory: 128
-          VolumesFrom:
-            - SourceContainer: simple-app
-          Command:
-            - /bin/sh -c "while true; do /bin/date > /var/www/my-vol/date; sleep 1; done"
       Volumes:
         - Name: my-vol
