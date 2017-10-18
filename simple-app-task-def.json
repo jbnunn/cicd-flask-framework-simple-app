@@ -29,23 +29,6 @@
                 "/usr/bin/supervisord"
             ],
             "essential": true
-        },
-        {
-            "name": "busybox",
-            "image": "busybox",
-            "cpu": 10,
-            "memory": 500,
-            "volumesFrom": [
-            {
-              "sourceContainer": "simple-app"
-            }
-            ],
-            "entryPoint": [
-                "sh",
-                "-c"
-            ],
-            "command": [],
-            "essential": false
         }
     ]
 }
