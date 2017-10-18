@@ -53,9 +53,7 @@ Resources:
         - Name: simple-app
           Image: !Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${Repository}:${Tag}
           EntryPoint:
-            - /usr/sbin/apache2
-            - -D
-            - FOREGROUND
+            - /usr/bin/supervisord
           Essential: true
           Memory: 128
           MountPoints:
