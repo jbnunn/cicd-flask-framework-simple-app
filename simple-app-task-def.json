@@ -26,9 +26,7 @@
                 }
             ],
             "entryPoint": [
-                "/usr/sbin/apache2",
-                "-D",
-                "FOREGROUND"
+                "/usr/bin/supervisord"
             ],
             "essential": true
         },
