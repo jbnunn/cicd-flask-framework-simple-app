@@ -67,7 +67,7 @@ Resources:
         GitHubRepo: !Ref GitHubRepo
         GitHubBranch: !Ref GitHubBranch
         TargetGroup: !GetAtt LoadBalancer.Outputs.TargetGroup
-        TemplateBucket: !Sub ecs-refarch-continuous-deployment-${AWS::Region}
+        TemplateBucket: !Sub alexaprize-infra
 
   LoadBalancer:
     Type: AWS::CloudFormation::Stack
