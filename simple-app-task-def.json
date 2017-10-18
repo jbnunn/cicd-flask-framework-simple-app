@@ -2,7 +2,7 @@
     "family": "console-sample-app",
     "volumes": [
         {
-            "name": "my-vol",
+            "name": "socialbot",
             "host": {}
         }
     ],
@@ -21,8 +21,8 @@
             ],
             "mountPoints": [
                 {
-                    "sourceVolume": "my-vol",
-                    "containerPath": "/var/www/my-vol"
+                    "sourceVolume": "socialbot",
+                    "containerPath": "/var/www/socialbot"
                 }
             ],
             "entryPoint": [
@@ -44,9 +44,7 @@
                 "sh",
                 "-c"
             ],
-            "command": [
-                "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
-            ],
+            "command": [],
             "essential": false
         }
     ]
