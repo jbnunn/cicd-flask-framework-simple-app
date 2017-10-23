@@ -1,4 +1,5 @@
-FROM ubuntu:14.04
+# FROM ubuntu:14.04
+FROM 544092797135.dkr.ecr.us-east-1.amazonaws.com/cobot-common
 
 RUN apt-get update
 RUN apt-get install -y python python-pip python-virtualenv nginx gunicorn supervisor
